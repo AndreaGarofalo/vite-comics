@@ -12,11 +12,9 @@ export default {
 </script>
 
 <template>
-  <div class="body">
-    <AppHeader />
-    <AppMain />
-    <AppFooter />
-  </div>
+  <AppHeader />
+  <AppMain />
+  <AppFooter />
 </template>
 
 <style>
@@ -25,8 +23,22 @@ export default {
   padding: 0;
   box-sizing: border-box;
 }
-.body {
-  width: 100vw;
-  height: 100vh;
+body {
+  min-height: 100vh;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+
+/* Utility */
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
 }
 </style>
