@@ -24,6 +24,7 @@ export default {
   box-sizing: border-box;
 }
 body {
+  font-family: "Open Sans";
   min-height: 100vh;
 }
 img {

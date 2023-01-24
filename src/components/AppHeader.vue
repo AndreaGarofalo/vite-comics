@@ -74,8 +74,10 @@ export default {
     <div class="container">
       <a href="#"><img src="../assets/img/dc-logo.png" alt="DC Logo" /></a>
       <ul>
-        <li v-for="link in menuLinks">
-          <a :href="link.url">{{ link.text }}</a>
+        <li v-for="link in menuLinks" :key="link.text">
+          <a :href="link.url" :class="{ active: link.current }">{{
+            link.text
+          }}</a>
         </li>
       </ul>
     </div>
@@ -97,11 +99,15 @@ export default {
     li {
       list-style-type: none;
       a {
-        padding: 1.7rem 1rem;
+        padding: 1.6rem 1rem;
         border-bottom: 5px solid transparent;
         &:hover {
           color: #0282f9;
-          border-bottom: 5px solid #0282f9;
+          border-bottom: 4px solid #0282f9;
+        }
+        &.active {
+          color: #0282f9;
+          border-bottom: 4px solid #0282f9;
         }
       }
     }
