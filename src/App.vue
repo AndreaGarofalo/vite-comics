@@ -26,6 +26,10 @@ export default {
 body {
   font-family: "Open Sans";
   min-height: 100vh;
+  background-image: url("./assets/img/footer-bg.jpg");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 img {
   max-width: 100%;

@@ -85,6 +85,9 @@ export default {
 </template>
 
 <style scoped lang="scss">
+header {
+  background-color: white;
+}
 .container {
   display: flex;
   justify-content: space-between;

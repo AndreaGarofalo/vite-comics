@@ -72,11 +72,6 @@ export default {
 
 <style scoped lang="scss">
 footer {
-  background-image: url("../assets/img/footer-bg.jpg");
-  background-position: bottom;
-  background-repeat: no-repeat;
-  background-size: cover;
-
   .container {
     max-width: 1200px;
     height: 100%;
@@ -105,6 +100,10 @@ footer {
   }
 }
 .follow-link {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
   height: 6rem;
   background-color: #303030;
   .container {
