@@ -1,5 +1,6 @@
 <script>
 export default {
+  name: "DC Header",
   data() {
     return {
       menuLinks: [
@@ -71,7 +72,7 @@ export default {
 <template>
   <header>
     <div class="container">
-      <img src="../assets/img/dc-logo.png" alt="DC Logo" />
+      <a href="#"><img src="../assets/img/dc-logo.png" alt="DC Logo" /></a>
       <ul>
         <li v-for="link in menuLinks">
           <a :href="link.url">{{ link.text }}</a>
@@ -87,7 +88,8 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 1200px;
-  margin: 1rem auto;
+  margin: 0 auto;
+  padding: 1rem;
   img {
     display: block;
     max-width: 3rem;
@@ -97,9 +99,7 @@ export default {
     li {
       list-style-type: none;
       a {
-        text-decoration: none;
-        padding: 27px 15px;
-        color: black;
+        padding: 1.7rem 1rem;
         border-bottom: 5px solid transparent;
         &:hover {
           color: #0282f9;
