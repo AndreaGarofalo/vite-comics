@@ -76,6 +76,11 @@ footer {
     max-width: 1200px;
     height: 100%;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../assets/img/dc-logo-bg.png");
+    background-position: right;
+    background-repeat: no-repeat;
     .footer-row {
       display: flex;
       justify-content: flex-start;
