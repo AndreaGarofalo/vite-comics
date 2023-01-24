@@ -16,13 +16,11 @@ export default {
 main {
   background-color: black;
   .container {
-    width: 1200px;
-    height: 5rem;
-    margin: 0 auto;
     display: flex;
     justify-content: center;
     align-items: center;
     h1 {
+      padding: 5rem;
       color: white;
       font-size: 30px;
     }
