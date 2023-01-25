@@ -1,68 +1,15 @@
 <script>
 export default {
   name: "DC Header",
-  data() {
-    return {
-      menuLinks: [
-        {
-          text: "Characters",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Comics",
-          url: "#",
-          current: true,
-        },
-        {
-          text: "Movies",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "TV",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Games",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Collectibles",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Videos",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Fans",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "News",
-          url: "#",
-          current: false,
-        },
-        {
-          text: "Shop",
-          url: "#",
-          current: false,
-        },
-      ],
-    };
+  props: {
+    links: Array,
   },
   methods: {
     toggleActive() {
-      if ((this.menuLinks.current = true)) {
-        this.menuLinks.current = false;
+      if ((this.links.current = true)) {
+        this.links.current = false;
       } else {
-        this.menuLinks.current = true;
+        this.links.current = true;
       }
     },
   },
@@ -74,7 +21,7 @@ export default {
     <div class="container">
       <a href="#"><img src="../assets/img/dc-logo.png" alt="DC Logo" /></a>
       <ul>
-        <li v-for="link in menuLinks" :key="link.text">
+        <li v-for="link in links" :key="link.text">
           <a :href="link.url" :class="{ active: link.current }">{{
             link.text
           }}</a>
@@ -85,13 +32,14 @@ export default {
 </template>
 
 <style scoped lang="scss">
+@use "../assets/scss/partials/mixins" as *;
+@use "../assets/scss/partials/variables" as *;
 header {
-  background-color: white;
+  background-color: $white;
 }
 .container {
-  display: flex;
+  @include center("cross");
   justify-content: space-between;
-  align-items: center;
   padding: 1rem;
   img {
     display: block;
@@ -105,12 +53,12 @@ header {
         padding: 1.6rem 1rem;
         border-bottom: 5px solid transparent;
         &:hover {
-          color: #0282f9;
-          border-bottom: 4px solid #0282f9;
+          color: $blue;
+          border-bottom: 4px solid $blue;
         }
         &.active {
-          color: #0282f9;
-          border-bottom: 4px solid #0282f9;
+          color: $blue;
+          border-bottom: 4px solid $blue;
         }
       }
     }

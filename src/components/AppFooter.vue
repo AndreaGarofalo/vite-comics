@@ -57,27 +57,35 @@ export default {
 
   <section class="follow-link">
     <div class="container">
-      <a href="#">SIGN-UP NOW</a>
+      <a href="#" class="sign-up">SIGN-UP NOW</a>
       <div class="our-socials">
         <h2>Follow Us</h2>
-        <i class="icon fa-brands fa-facebook"></i>
-        <i class="icon fa-brands fa-twitter"></i>
-        <i class="icon fa-brands fa-youtube"></i>
-        <i class="icon fa-brands fa-pinterest"></i>
-        <i class="icon fa-solid fa-location-dot"></i>
+        <a href=""
+          ><img src="../assets/img/footer-facebook.png" alt="facebook"
+        /></a>
+        <a href=""
+          ><img src="../assets/img/footer-youtube.png" alt="facebook"
+        /></a>
+        <a href=""
+          ><img src="../assets/img/footer-twitter.png" alt="facebook"
+        /></a>
+        <a href=""
+          ><img src="../assets/img/footer-pinterest.png" alt="facebook"
+        /></a>
+        <a href=""
+          ><img src="../assets/img/footer-periscope.png" alt="facebook"
+        /></a>
       </div>
     </div>
   </section>
 </template>
 
 <style scoped lang="scss">
+@use "../assets/scss/partials/variables" as *;
 footer {
   .container {
     max-width: 1200px;
-    height: 100%;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
     background-image: url("../assets/img/dc-logo-bg.png");
     background-position: right;
     background-repeat: no-repeat;
@@ -88,16 +96,16 @@ footer {
         padding: 2rem 1rem;
         h3 {
           padding: 15px 0;
-          color: white;
+          color: $white;
         }
         li {
           list-style-type: none;
-          color: gray;
+          color: $gray;
           a {
             font-size: 12px;
             display: inline-block;
             padding: 3px 0;
-            color: gray;
+            color: $gray;
           }
         }
       }
@@ -105,10 +113,6 @@ footer {
   }
 }
 .follow-link {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
   height: 6rem;
   background-color: #303030;
   .container {
@@ -116,21 +120,21 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    a {
-      border: 2px solid #0282f9;
-      color: #0282f9;
+    .sign-up {
+      border: 2px solid $blue;
+      color: $blue;
       padding: 5px 10px;
     }
     .our-socials {
       display: flex;
       align-items: center;
       h2 {
-        color: #0282f9;
+        color: $blue;
         padding: 0 1rem;
       }
-      .icon {
-        color: gray;
-        font-size: 20px;
+      img {
+        color: $gray;
+        font-size: 16px;
         padding: 0 5px;
       }
     }
